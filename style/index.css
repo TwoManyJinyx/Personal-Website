@@ -16,17 +16,17 @@ body {
 }
 
 .home h1,
-.home h2, 
-.home{
+.home h3 {
     margin: 0;
+    font-size: 100vm;
 }
 
-.home h2 {
+.home h3 {
     margin-top: 0.50rem;
 }
 
 .shortcuts  {
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 
 .shortcuts {
