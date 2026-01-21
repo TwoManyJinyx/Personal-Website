@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url(../assets/Tower.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    user-select: none;
+    background-attachment: fixed;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* CLASSES */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px; /* ⬅ space between screen and options */
+}
+
+
+.options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.button {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.screen {
+    width: min(1000px, 180vw);
+    height: min(300px, 60vw);
+    max-height: 300px;
+    border-radius: 50px;
+    border: 2px dotted grey;
+    background-color: rgba(182, 182, 182, 0.541);
+    display: flex;
+    align-items: center;      /* ⬅ vertical centering */
+    justify-content: center;  /* ⬅ horizontal centering */
+    padding: 10px;
+}
+
+.screen img {
+    width: min(750px, 140vw);
+    height: min(150px, 30vw);
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 15px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.cards {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.menu-button,
+.extra-button {
+    position: fixed;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10; /* ensures they stay above everything */
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.menu-button {
+    left: 25px;
+}
+
+.extra-button {
+    right: 25px;
+}
+
+
+.button img {
+    width: 35px;
+    height: 35px;
+}
+
+
+
+/* INTERACTIVE ANIMATIONS */
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #222;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.menu-button:hover,
+.extra-button:hover {
+    transform: scale(1.1);
+    filter: brightness(0.2);
+}
+
+.menu-button:active,
+.extra-button:active {
+    transform: scale(0.95);
+}
