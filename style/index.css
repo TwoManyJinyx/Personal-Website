@@ -38,7 +38,7 @@ body {
         rgba(104, 104, 196, 0.9)
     );
 
-    animation: background-glow 6s ease-in-out infinite alternate;
+    animation: background-glow 6s easse-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
 }
