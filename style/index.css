@@ -4,17 +4,44 @@
 }
 
 :root {
-    --dark-mode-color1: rgb(0, 0, 20);
-    --dark-mode-color2: rgb(12, 12, 44);
-    --dark-mode-color3: rgb(80, 80, 180);
-    --dark-mode-color4: rgba(104, 104, 196, 0.9);
+    --background-color1: rgb(0, 0, 20);
+    --background-color2: rgb(12, 12, 44);
+    --background-color3: rgb(80, 80, 180);
+    --background-color4: rgba(104, 104, 196, 0.9);
+}
+
+body.light-mode {
+    --background-color1: rgb(79, 182, 201);
+    --background-color2: rgb(75, 157, 182);
+    --background-color3: rgb(199, 161, 55);
+    --background-color4: rgb(255, 255, 255);
+}
+
+.theme-toggle {
+    display: none;
+}
+
+.panel {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4 ease, visibility 0.4 ease;
+    z-index: 200;
+}
+
+.panel.active{
+    opacity: 1;
+    visibility: visible;
 }
 
 body {
+    background: var(--background-color1);
     font-family: myFont;
     margin: 0;
     overflow: hidden;
+    transition: background 0.5 ease, color 0.5s ease;
 }
+
+input[type="checkbox"] { display: none; }
 
 .shooting-star {
     top: 100px;
@@ -82,25 +109,38 @@ body {
       }
     }
 
+.sky.hidden {
+    display: none;
+}
 
 
 .mode-button {
-    display: flex;
-    top: 100px;
-    left: 1500px;
-    width: 80px;
-    height: 80px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+
+    width: 70px;
+    height: 70px;
+
     border-radius: 50%;
+    border: none;
     cursor: pointer;
-    position: absolute;
-    z-index: 20;
-    box-shadow: 0px 0px 15px rgb(255, 255, 255, 1);
-    background: radial-gradient(circle at 30% 30%, #ffffff, #ffffff);
-    transition: ease-in-out 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+
+    background: white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
+
+    transition: transform 0.3s ease;
+    z-index: 100;
 }
 
 .mode-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -119,8 +159,8 @@ body {
     height: 100vh;
     background: linear-gradient(
         to bottom,
-        var(--dark-mode-color1) 75%,
-        var(--dark-mode-color2)
+        var(--background-color1) 75%,
+        var(--background-color2)
     );
 
 }
@@ -136,7 +176,7 @@ body {
     background: linear-gradient(
         to bottom,
         transparent 50%,
-        var(--dark-mode-color4)
+        var(--background-color4)
     );
 
     animation: background-glow 3s ease-in-out infinite alternate;
@@ -175,32 +215,19 @@ body {
 }
 
 
-.home h1,
-.home h3 {
-    margin: 0;
-    font-size: 50px;
-}
-
-.home h3 {
-    margin-top: 0.50rem;
-}
-
 .shortcuts  {
-    margin-top: 5rem;
-}
-
-.shortcuts {
     display: flex;
     gap: 50px;
-    
-}
-
-.shortcuts p {
+    margin-top: 5rem;
     cursor: pointer;
     font-size: 2vh; 
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 0 10px var(--dark-mode-color2);
 }
+
+.shortcuts p{
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0 10px var(--background-color2);
+}
+
 
 .shortcuts p:hover {
     transform: scale(1.5);

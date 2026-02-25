@@ -22,3 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
         sky.appendChild(star);
     }
 });
+
+// const themeToggle = document.getElementById('theme-toggle');
+
+// themeToggle.addEventListener('change', () => {
+//     body.classList.toggle('light-mode');
+// })
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const button = document.getElementById("themeToggle");
+  const panel = document.getElementById("extraPanel");
+
+  button.addEventListener("click", function () {
+    
+    document.body.classList.toggle("light-mode");
+
+    panel.classList.toggle("active");
+
+    console.log("Theme toggled");
+  });
+
+});
