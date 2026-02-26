@@ -21,16 +21,17 @@ body.light-mode {
     display: none;
 }
 
-.panel {
+.dark {
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.dark.active{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4 ease, visibility 0.4 ease;
     z-index: 200;
-}
-
-.panel.active{
-    opacity: 1;
-    visibility: visible;
 }
 
 body {
@@ -233,3 +234,106 @@ input[type="checkbox"] { display: none; }
     transform: scale(1.5);
     box-shadow: 0 0 25px ;
 }
+
+
+/* ======================================================================================= */
+
+.clouds {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    scale: 0.7;
+}
+
+.cloud-circle-1 {
+  position: absolute;
+  top: -320px;
+  left: -320px;
+  width: 800px;
+  height: 275px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 400px 400px 200px 0px #35508ae3;
+}
+
+.cloud-circle-2 {
+  position: absolute;
+  top: 120px;
+  left: 500px;
+  width: 750px;
+  height: 175px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 100px 0px #68729e;
+}
+
+.cloud-circle-3 {
+  position: absolute;
+  top: -200px;
+  left: 350px;
+  width: 200px;
+  height: 175px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 50px 0px #b6ccd38a;
+  transform: rotate(10deg);
+}
+
+.cloud-circle-4 {
+  position: absolute;
+  top: -150px;
+  left: 400px;
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 50px 0px #35508ae3;
+  transform: rotate(-10deg);
+}
+
+.cloud-circle-5 {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  width: 200px;
+  height: 175px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 50px 0px #576c7496;
+  transform: rotate(-30deg);
+}
+
+.cloud-circle-6 {
+  position: absolute;
+  top: 100px;
+  left: -300px;
+  width: 700px;
+  height: 100px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 300px 300px 100px 0px #95b2bd;
+  transform: rotate(20deg);
+}
+
+/* .cloud-circle-7 {
+  position: absolute;
+  top: 500px;
+  left: 120px;
+  width: 500px;
+  height: 175px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 100px 0px #cdd4d6a1;
+}
+
+.cloud-circle-8 {
+  position: absolute;
+  top: 300px;
+  left: -250px;
+  width: 200px;
+  height: 175px;
+  border-radius: 50%;
+  filter: url(#filter);
+  box-shadow: 200px 300px 50px 0px #084c634f;
+  transform: rotate(-30deg);
+} */

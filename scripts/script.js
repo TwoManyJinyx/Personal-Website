@@ -32,13 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
 
   const button = document.getElementById("themeToggle");
-  const panel = document.getElementById("extraPanel");
 
   button.addEventListener("click", function () {
     
     document.body.classList.toggle("light-mode");
 
-    panel.classList.toggle("active");
+    const darkElements = document.querySelectorAll(".dark");
+
+    darkElements.forEach(el => {
+      el.classList.toggle("active");
+    });
 
     console.log("Theme toggled");
   });

@@ -13,25 +13,42 @@
     
 
     <button id="themeToggle" class="mode-button"></button>
-
-    <div id="extraPanel" class="panel">
-        This is a panel that will toggle
-    </div>
     
     <div class="background-container">
+        
+        <div class="clouds">
+        <div class="cloud-circle-1"></div>
+        <div class="cloud-circle-2"></div>
+        <div class="cloud-circle-3"></div>
+        <div class="cloud-circle-4"></div>
+        <div class="cloud-circle-5"></div>
+        <div class="cloud-circle-6"></div>
+        <div class="cloud-circle-7"></div>
+        <div class="cloud-circle-8"></div>
+        </div>
+
+
+        <svg width="0" height="0">
+            <filter id="filter">
+                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+                <feDisplacementMap in="SourceGraphic" scale="180" />
+            </filter>
+        </svg>
+
+
         <div class="gradient-background"></div>
         
         <!-- for dark mode -->
-        <div class="stars"></div>
+        <div class="stars dark"></div>
         
         <!-- for light mode -->
-        <div class="sky"></div>
+        <div class="sky dark"></div>
         
         <div class="moving-background">
             <!-- for dark mode -->
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
+            <div class="shooting-star dark"></div>
+            <div class="shooting-star dark"></div>
+            <div class="shooting-star dark"></div>
             
             <!-- for light mode -->
         </div>
