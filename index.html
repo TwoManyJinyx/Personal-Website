@@ -1,85 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <title>Document</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/background.css">
-    <script src="scripts/script.js"></script>
-</head>
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/container.css">
+    <link rel="stylesheet" href="style/background.css">
+    <link rel="stylesheet" href="style/style.css">
+    
+    
+
+    <title>Jinyx's Website</title>
+</head>
 <body>
 
     
-
-    <button id="themeToggle" class="mode-button"></button>
     
+    
+
     <div class="background-container">
-        
-        <div class="clouds">
-        <!-- <div class="cloud-circle-1"></div>
-        <div class="cloud-circle-2"></div>
-        <div class="cloud-circle-3"></div>
-        <div class="cloud-circle-4"></div>
-        <div class="cloud-circle-5"></div>
-        <div class="cloud-circle-6"></div> -->
-        </div>
-
-
-        <svg width="0" height="0">
-            <filter id="filter">
-                <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
-                <feDisplacementMap in="SourceGraphic" scale="180" />
-            </filter>
-        </svg>
-
 
         <div class="gradient-background"></div>
-        
-        <!-- for dark mode -->
-        <div class="stars dark"></div>
-        
-        <!-- for light mode -->
-        <div class="sky dark"></div>
-        
-        <div class="moving-background">
-            <!-- for dark mode -->
-            <div class="shooting-star dark"></div>
-            <div class="shooting-star dark"></div>
-            <div class="shooting-star dark"></div>
             
-            <!-- for light mode -->
+        <div class="squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <div class="star"></div>
+        <div class="sky"></div>
+
+    </div>
+    <div class="content-container">
+        <div class="navbar">
+            <a href="#about" class="section-button">About</a>
+            <a href="#skills" class="section-button">Skills</a>
+            <a href="#projects" class="section-button">Projects</a>
+            <a href="#socials" class="section-button">Socials</a>
+            <button id="themeToggle" class="theme-button"></button>
+        </div>
+        <div class="section-container">
+            
+            <!-- Home -->
+            <div class="section"  id="home">
+                <div class="home">
+                    <div class="home-container">
+                        <h1>Welcome to My Website!</h1>
+                        <h3>Have a look around!</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- About -->
+            <div class="section" id="about">
+                <h1>About Me</h1>
+                <div class="about">
+                    <img src="assets/pfp.png" alt="">
+                    <div class="text-container">
+                        <p>Fullname: Jan Lorenz G De Vera</p>
+                        <p>Age: 19</p>
+                        <p>Nationality: Phillipines</p>
+                        <p>Sex: Male</p>
+                        <p>Hi I'm Jinyx! A 19yr old dude in the Phillipines. Currently a student at AMA as a ACT Student. Despite being ACT, I have alot of knowledge when it comes to programming. <br>I also have some skills on art, music, writting,<br> and directing/editing videos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills -->
+            <div class="section" id="skills">
+                <div class="skills">
+                    <h1>Section 3 Skills</h1>
+                </div>
+            </div>
+            
+            <!-- Projects -->
+            <div class="section" id="projects">
+                <div class="projects">
+                    <h1>Section 4 Projects</h1>
+                </div>
+            </div>
+            
+            <!-- Projects -->
+            <div class="section" id="socials">
+                <div class="socials">
+                    <h1>Section 5 socials</h1>
+                </div>
+            </div>
+
+            <!-- ETC -->
+            <div class="section" id="etc">
+                <div class="etc">
+                    <h1>Section 6 ETC/End</h1>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="main-content-contaier">
-        
-    
 
-        <div class="section-container">
-            <div class="section">
-                <div class="content-container">
-                    <h1>Welcome to my Website!</h1>
-                    <h3>Have a look around!</h3> 
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="content-container">
-                    <h1>Welcome to my Website!</h1>
-                    <h3>Have a look around!</h3> 
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="section">
-                <div class="content-container">
-                    <h1>Welcome to my Website!</h1>
-                    <h3>Have a look around!</h3> 
-                    </div>
-                </div>
-            </div>
-    </div>
-    
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>

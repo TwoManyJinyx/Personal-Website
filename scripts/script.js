@@ -1,3 +1,50 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("themeToggle");
+    button.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        const lightElements = document.querySelectorAll(".light");
+        lightElements.forEach(el => {
+            el.classList.toggle("active");
+        });
+
+        console.log("Theme toggled");
+    });
+});
+
+const sections = document.querySelector(".section-container");
+const navbar = document.querySelector(".navbar");
+const themebutton = document.querySelector(".theme-button");
+
+let lastScroll = 0;
+
+sections.addEventListener("scroll", () => {
+    const currentScroll = sections.scrollTop;
+
+    if (currentScroll > lastScroll) {
+        navbar.classList.add("navbar-hidden");
+    } else {
+        navbar.classList.remove("navbar-hidden");
+    }
+
+    lastScroll = currentScroll;
+});
+
+document.querySelectorAll('.section-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const sky = document.querySelector(".sky");
@@ -21,29 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sky.appendChild(star);
     }
-});
-
-// const themeToggle = document.getElementById('theme-toggle');
-
-// themeToggle.addEventListener('change', () => {
-//     body.classList.toggle('light-mode');
-// })
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const button = document.getElementById("themeToggle");
-
-  button.addEventListener("click", function () {
-    
-    document.body.classList.toggle("light-mode");
-
-    const darkElements = document.querySelectorAll(".dark");
-
-    darkElements.forEach(el => {
-      el.classList.toggle("active");
-    });
-
-    console.log("Theme toggled");
-  });
-
 });

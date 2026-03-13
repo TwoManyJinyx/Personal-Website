@@ -1,0 +1,81 @@
+@font-face {
+    font-family: myFont;
+    src: url(/fonts/ZF2334AfteraRain-Regular.otf);
+}
+
+:root {
+    --background-color: rgb(255, 255, 255);
+    --background-color2: rgb(0, 0, 0);
+    --text-color: rgb(0, 0, 0);
+    --text-color2: rgb(255, 255, 255);
+}
+
+body.dark-mode {
+    --background-color: rgb(0, 0, 0);
+    --background-color2: rgb(255, 255, 255);
+    --text-color: rgb(255, 255, 255);
+    --text-color2: rgb(0, 0, 0);
+}
+
+.mode-button {
+    display: none;
+}
+
+body {
+    background: var(--background-color);
+    font-family: myFont;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    transition: background 0.5s ease;
+    color: var(--text-color);
+}
+
+.navbar {
+    color: var(--text-color2);
+    background-color: var(--background-color2);
+}
+
+.theme-button {
+    background-color: var(--background-color2);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1000;
+    top: 50vh;
+    right: 1vh;
+}
+
+.about {
+    background-color: var(--background-color2);
+    border-radius: 10px;
+    
+  
+    box-shadow: 0 100px 1000px var(--background-color2); 
+    color: var(--text-color2);
+}
+
+a {
+    color: var(--text-color2);
+    text-decoration: none;
+}
+
+.home {
+    color: var(--text-color2);
+}
+
+.home-container {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: var(--background-color2);
+    box-shadow: 0 0 0px var(--background-color2);
+    transition: box-shadow 0.5s ease, transform 0.8s ease;
+}
+
+.home-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 100px var(--background-color2);
+}
+
